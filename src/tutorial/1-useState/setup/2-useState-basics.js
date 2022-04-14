@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 
+// the title has to start with capitali letter i.e U
 const UseStateBasics = () => {
   // const value = useState(1)[0];
   // const handler = useState(1)[1];
   // console.log(value, handler);
+
   // the [] can be named anything, its named text here.
   const [text, setText] = useState("Random Title");
 
