@@ -13,7 +13,20 @@ const ControlledInputs = () => {
   const handleSubmit = (e) => {
     // stops page from having to reload
     e.preventDefault();
-    console.log(firstName, email);
+    if (firstName && email) {
+      // es6 same as -> firstName: firstName, email: email
+      const person = { id: new Date().getTime().toString(), firstName, email };
+      console.log(person);
+      setPeople((people) => {
+        // remember the spread operator makes it so the array doesnt get reset.
+        return [...people, person];
+      });
+      // clears the items
+      setFirstName("");
+      setEmail("");
+    } else {
+      console.log("empty values");
+    }
   };
 
   return (
@@ -43,6 +56,16 @@ const ControlledInputs = () => {
           </div>
           <button type="submit"> add person</button>
         </form>
+        {/* can be done with (person, index) but there's a better version.  */}
+        {people.map((person, index) => {
+          const { id, firstName, email } = person;
+          return (
+            <div className="item" key={id}>
+              <h4> {firstName}</h4>
+              <p> {email}</p>
+            </div>
+          );
+        })}
       </article>
     </>
   );
