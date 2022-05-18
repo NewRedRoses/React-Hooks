@@ -13,19 +13,19 @@
 6. ~~Tabs~~
 7. ~~Slider~~
 
-#### Forms
+#### ~~Forms~~
 
-8. Lorem Ipsum Generator
-9. Color Shades Generator
-10. Grocery Bud
+8. ~~Lorem Ipsum Generator~~
+9. ~~Color Shades Generator~~
+10. ~~Grocery Bud~~
 
-#### useRef
+#### ~~useRef~~
 
-11. Navbar
+11. ~~Navbar~~
 
 #### useContext
 
-12. Modal and Sidebar
+12. ~~Modal and Sidebar~~
 13. Stripe Menus
 
 #### useReducer and useContext
